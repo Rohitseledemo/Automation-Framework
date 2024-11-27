@@ -184,8 +184,7 @@ public class NewDemoBasePage {
         boolean tableVisible = true;
         wait = new WebDriverWaits(this.getBrowser());
         javaScript = new JavaScriptExecutorMethods(this.getBrowser());
-//        wait.waitForElementToBeClickable(9,mapStates);
-        Thread.sleep(6000);
+        wait.waitForElementToBeClickable(9,mapStates);
         this.getBrowser().findElement(mapStates).click();
         try{
             tableVisible = wait.waitForPresenceOfElement(15,tableDataLoadWait);
@@ -633,11 +632,4 @@ public class NewDemoBasePage {
         }
         return textDisplayed;
     }
-
-    public void waitAndClick(WebElement ele){
-        wait = new WebDriverWaits(this.getBrowser());
-        wait.waitForElementToBeClickable(10,ele);
-        ele.click();
-    }
-
 }

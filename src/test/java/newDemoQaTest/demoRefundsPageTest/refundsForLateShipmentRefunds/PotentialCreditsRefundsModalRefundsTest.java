@@ -2,15 +2,12 @@ package newDemoQaTest.demoRefundsPageTest.refundsForLateShipmentRefunds;
 
 import newDemoQaPages.BaseModal;
 import newDemoQaPages.NewDemoLandingPage;
-import newDemoQaPages.NewDemoQALoginPage;
-import newDemoQaPages.demoPriorAgreementComparisonPage.PriorAgreementComparisonPage;
 import newDemoQaPages.demoRefundsPage.RefundsPage;
 import newDemoQaPages.demoRefundsPage.refundsForLateShipment.PotentialCreditsRefundsModalRefunds;
 import newDemoQaTest.NewDemoBaseTest;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 
 public class PotentialCreditsRefundsModalRefundsTest extends NewDemoBaseTest {

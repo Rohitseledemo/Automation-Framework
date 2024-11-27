@@ -3,7 +3,6 @@ package newDemoQaTest.trackSavingsPageTest;
 import baseClass.NewDemoBasePage;
 import newDemoQaPages.BaseModal;
 import newDemoQaPages.NewDemoLandingPage;
-import newDemoQaPages.NewDemoQALoginPage;
 import newDemoQaPages.switchToCompanyView.SwitchToCompanyViewModal;
 import newDemoQaPages.trackSavingsPage.AvgSavPkgInTrackSavFirstLevel;
 import newDemoQaPages.trackSavingsPage.AvgSavPkgInTrackSavSecondLevel;

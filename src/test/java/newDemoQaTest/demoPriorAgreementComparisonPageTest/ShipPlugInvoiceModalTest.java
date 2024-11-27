@@ -1,8 +1,6 @@
 package newDemoQaTest.demoPriorAgreementComparisonPageTest;
 
-import newDemoQaPages.BaseModal;
 import newDemoQaPages.NewDemoLandingPage;
-import newDemoQaPages.NewDemoQALoginPage;
 import newDemoQaPages.demoPriorAgreementComparisonPage.PriorAgreementComparisonPage;
 import newDemoQaPages.demoPriorAgreementComparisonPage.ShipPlugInvoiceModal;
 import newDemoQaTest.NewDemoBaseTest;

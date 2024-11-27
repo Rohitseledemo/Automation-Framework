@@ -15,13 +15,9 @@ public class NewDemoBaseTest {
 
     @BeforeMethod(alwaysRun = true)
     @Parameters({"Email", "Password", "URL"})
-//    public void launchBrowser(@Optional("subdomain@dogoodsinc.com") String Email,
-//                              @Optional("Dev@Admin2023!") String Password,
-//                              @Optional("https://new-demo.dogoodsinc.com/") String Url)
-//            throws MalformedURLException {
-        public void launchBrowser(@Optional("subdomain@dogoodsinc.com") String Email,
-                @Optional("Dev@Admin2023!") String Password,
-                @Optional("https://demo.shipplug.com/") String Url)
+        public void launchBrowser(@Optional("admin@123.com") String Email,
+                @Optional("admin2024!") String Password,
+                @Optional("https://demo.com/") String Url)
             throws MalformedURLException {
 
         this.url = Url;
