@@ -1,0 +1,13 @@
+image: maven:3.6.3
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Prod All
+          caches:
+            - maven
+          script:
+            - mvn clean compile
+            - mvn test || true
+          artifacts:
+            - target/**
