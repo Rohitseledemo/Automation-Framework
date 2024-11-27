@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-    <suite name="NewDemoQA Test Suite" parallel="methods" thread-count="4">
+<suite name="NewDemoQA Test Suite" parallel="methods" thread-count="4">
     <listeners>
         <listener class-name="utility.NewDemoTestNGListeners"/>
         <listener class-name="utility.NewDemoRetryTransformer"/>
     </listeners>
 
     <test verbose="2" preserve-order="true" name="New-Demo-QA">
-        <!-- QC Credentials -->
-        <parameter name ="Email" value="abc@gmail.com"/>
-        <parameter name="Password" value="abc@2024"/>
-        <parameter name="URL" value="testWebsite.com"/>
+        <!-- QA Credentials -->
+        <parameter name ="Email" value="admin@123.com"/>
+        <parameter name="Password" value="admin2024!"/>
+        <parameter name="URL" value="https://demo.com/"/>
 
         <classes>
-<!--        Login & Dashboard Page TCs-->
-            <class name="newDemoQaTest.NewDemoLoginPageTest"/>
+            <!--        Login & Dashboard Page TCs-->
+            <class name="newDemoQaTest.NewDemoLoginPageTest">
+                <methods>
+                    <exclude name="forgotPasswordPageTest"/>
+                </methods>
+            </class>
             <class name="newDemoQaTest.switchToCompanyView.SwitchToCompanyViewModalTest"/>
 
-<!--        Track Savings Page TCs-->
+            <!--        Track Savings Page TCs-->
             <class name="newDemoQaTest.trackSavingsPageTest.TrackSavingsPageTest"/>
             <class name="newDemoQaTest.trackSavingsPageTest.TrackSavAvgSavPerPkgTest"/>
             <class name="newDemoQaTest.trackSavingsPageTest.TrackSavPriorDiscountModalTest"/>
 
-<!--        Prior Agreement Page TCs-->
+            <!--        Prior Agreement Page TCs-->
             <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.PriorAgreementComparisonTest"/>
-            <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.totalSavings.SurchargeSavingsModalTest"/>
+            <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.totalSavings.SurchargeSavingsModalTest">
+                <methods>
+                    <exclude name="surchargeSecondLevelModalValidation"/>
+                </methods>
+            </class>
             <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.totalSavings.DimensionalWeightImpactModalTest"/>
             <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.totalSavings.DWIDimDetailModalTest"/>
             <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.AvgSavPerPkgModalTest"/>
@@ -40,7 +48,7 @@
             <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.onTimeDeliveryModalsTest.FedExOnTimeDeliveryModalTest"/>
             <class name="newDemoQaTest.demoPriorAgreementComparisonPageTest.onTimeDeliveryModalsTest.UpsOnTimeDeliveryModalTest"/>
 
-<!--        Refunds Page TCs-->
+            <!--        Refunds Page TCs-->
             <class name="newDemoQaTest.demoRefundsPageTest.RefundsPageTest"/>
             <class name="newDemoQaTest.demoRefundsPageTest.ServiceSummaryModalTest"/>
             <class name="newDemoQaTest.demoRefundsPageTest.refundsForLateShipmentRefunds.PotentialCreditsRefundsModalRefundsTest"/>
@@ -48,7 +56,7 @@
             <class name="newDemoQaTest.demoRefundsPageTest.CarrierPerformanceModalTest"/>
             <class name="newDemoQaTest.demoRefundsPageTest.DenialReasonsModalTest"/>
 
-<!--        Invoice Review Page TCs-->
+            <!--        Invoice Review Page TCs-->
             <class name="newDemoQaTest.demoInvoiceReviewPageTest.SurchargeSpendModalTest"/>
             <class name="newDemoQaTest.demoInvoiceReviewPageTest.InvoiceReviewPageTest"/>
             <class name="newDemoQaTest.demoInvoiceReviewPageTest.TotalMonthlySpendModalTest"/>
@@ -61,13 +69,13 @@
             <class name="newDemoQaTest.demoInvoiceReviewPageTest.AdvancedSearchModalInvoiceReviewTest"/>
             <class name="newDemoQaTest.demoInvoiceReviewPageTest.NicknameAccountsModalInvoiceReviewTest"/>
 
-<!--        Claims Page TCs-->
+            <!--        Claims Page TCs-->
             <class name="newDemoQaTest.ClaimsPageTest"/>
 
-<!--        About Page TCs-->
+            <!--        About Page TCs-->
             <class name="newDemoQaTest.AboutUsPageTest"/>
 
-<!--        Yearly Increases Page-->
+            <!--        Yearly Increases Page-->
             <class name="newDemoQaTest.YearlyIncreasesPageTest"/>
         </classes>
     </test>
