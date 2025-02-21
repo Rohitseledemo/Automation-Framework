@@ -1,0 +1,8 @@
+package newDemoQaPages.demoRefundsPage.serviceSummaryModals;
+
+
+import newDemoQaPages.demoPriorAgreementComparisonPage.refundsForLateShipment.PotentialCreditsRefundsModalFourthLevel;
+
+public class ServiceSummarySecondLevelModal extends PotentialCreditsRefundsModalFourthLevel {
+
+}

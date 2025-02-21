@@ -1,0 +1,6 @@
+package newDemoQaPages.demoInvoiceReviewPage.potentialSavingsCardModals;
+
+import newDemoQaPages.demoPriorAgreementComparisonPage.refundsForLateShipment.PotentialCreditsRefundsModalSecondLevel;
+
+public class PotentialSavingsCardModalSecondLevel extends PotentialCreditsRefundsModalSecondLevel {
+}
